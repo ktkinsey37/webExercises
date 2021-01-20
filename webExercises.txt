@@ -1,0 +1,48 @@
+1. Hypertext transport protocol; process by which HTML is sent and received
+
+2. A url is a textual address for the file/page/site someone is wishing to access
+
+3. DNS is the lookup registry/system for translating URLs to IP addresses and locating them
+
+4. Query strings are text strings appended to normal URLs to creat specific conditions for the website ie: search for specific terms, create specific conditions, access specific previously-created data
+
+5. GET sends a request for information to be sent to the browser; POST sends a request for information and also seeks to interact with the information
+
+6. HTTP request is what is sent by the browser requesting particular information
+
+7. HTTP response is what is sent back, including an http code and possibly the information requested
+
+8. Headers are particular pieces of information sent with the request/response eg: Access-Language, color, date
+
+9. First, the browser parses it, then, starting with local memory, then local network, then ISP, then DNS registries, it searches for a matching IP lookup. At that point it connects with the server and the request is transmitted over to the server. The server begins to handle the request, often resulting in it sending back the webpage as an HTML file via HTTP request. Any additional files needed are also processed as the code in the HTML file is parsed in the browser.
+
+10. C:\Users\ktkin>curl https://icanhazdadjoke.com/search?term=pirate
+What does a pirate pay for his corn? A buccaneer!
+What did the pirate say on his 80th birthday? Aye Matey!
+Why couldn't the kid see the pirate movie? Because it was rated arrr!
+Why do pirates not know the alphabet? They always get stuck at "C".
+Why are pirates called pirates? Because they arrr!
+
+11. C:\Users\ktkin>dig icanhazdadjoke.com
+
+; <<>> DiG 9.16.10 <<>> icanhazdadjoke.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29639
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;icanhazdadjoke.com.            IN      A
+
+;; ANSWER SECTION:
+icanhazdadjoke.com.     299     IN      A       172.67.181.69
+icanhazdadjoke.com.     299     IN      A       104.21.91.232
+
+12. C:\Users\ktkin\Springboard\webExercises>py -m http.server
+Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+::1 - - [20/Jan/2021 10:41:45] "GET / HTTP/1.1" 304 -
+::1 - - [20/Jan/2021 10:41:49] "GET / HTTP/1.1" 304 -       //the two get requests are me visiting the page
+
+//I'm not really following what it's saying about using the URL constructor method. Could we talk about that a little?
